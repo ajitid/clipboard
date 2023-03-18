@@ -1,3 +1,15 @@
+Note from the maintainer who forked the package:
+
+We've made changes so that the package prefers xsel for UNIX over xclip. You can retrieve this package with:
+
+```bash
+$ go get github.com/ajitid/clipboard
+```
+
+Original readme starts after the separator.
+
+---
+
 [![Build Status](https://travis-ci.com/atotto/clipboard.svg?branch=master)](https://travis-ci.com/atotto/clipboard)
 
 [![GoDoc](https://godoc.org/github.com/atotto/clipboard?status.svg)](http://godoc.org/github.com/atotto/clipboard)
