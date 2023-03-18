@@ -66,17 +66,17 @@ func findClipboardUtility() commandInfo {
 		}
 	}
 
-	c.pasteCmdArgs = xclipPasteArgs
-	c.copyCmdArgs = xclipCopyArgs
-
-	if _, err := exec.LookPath(xclip); err == nil {
-		return c
-	}
-
 	c.pasteCmdArgs = xselPasteArgs
 	c.copyCmdArgs = xselCopyArgs
 
 	if _, err := exec.LookPath(xsel); err == nil {
+		return c
+	}
+
+	c.pasteCmdArgs = xclipPasteArgs
+	c.copyCmdArgs = xclipCopyArgs
+
+	if _, err := exec.LookPath(xclip); err == nil {
 		return c
 	}
 
